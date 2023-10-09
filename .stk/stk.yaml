@@ -1,0 +1,60 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: demo-app-1009
+  description: demo-app-1009
+  starter: coffee-studio/java-springboot-restapi-stack@3.0.0/rest-api-with-spring-data-jpa
+  stack-version-id: 01HCADYW102SFBJSD9MSN9G3SR
+  stack: java-springboot-restapi-stack@3.0.0
+spec:
+  type: app
+  app-id: 01HCAEH4TZDGEGRG3FRCG80FMA
+  plugins:
+    - name: coffee-studio/java-springboot-restapi-stack@3.0.0/java-springboot-restapi-base-plugin@1.1.0
+      alias: java-springboot-restapi-base-plugin-1696862810396
+      plugin-version-id: 01HCAD2FAJNWKSV2K6R0563GDZ
+      stack-version-id: 01HCADYW102SFBJSD9MSN9G3SR
+      type: app
+      inputs:
+        project_name: demo-app-1009
+        project_description: Microservices that exposes a REST API built with Java
+          and Spring Boot
+        project_springboot_version: 2.7.2
+        project_group_id: br.com.zup.edu
+        project_artifact_id: demo-app-1009
+        project_version: 0.0.1-SNAPSHOT
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: coffee-studio/java-springboot-restapi-stack@3.0.0/java-spring-data-jpa-plugin@1.1.1
+      alias: java-spring-data-jpa-plugin-1696862810409
+      plugin-version-id: 01HCAD48RAQ47EKCSM0KR8ET2C
+      stack-version-id: 01HCADYW102SFBJSD9MSN9G3SR
+      type: app
+      inputs:
+        database_name: PostgreSQL
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs:
+    global_cs_project_name: demo-app-1009
+    global_cs_project_artifact_id: demo-app-1009
+    global_cs_project_artifact_id_sanitized: demoapp1009
+    global_cs_project_java_version: '17'
+    global_cs_project_springboot_version: 2.7.2
+    global_cs_project_base_package: br.com.zup.edu.demoapp1009
+    global_cs_project_base_package_dir: br/com/zup/edu/demoapp1009
+    global_cs_application_main_java_classname: DemoApp1009Application.java
+    global_cs_application_main_java_classpath: br.com.zup.edu.demoapp1009.DemoApp1009Application.java
+    global_cs_application_main_java_classpath_dir: br/com/zup/edu/demoapp1009/DemoApp1009Application.java
+    global_cs_application_test_java_classname: DemoApp1009ApplicationTests.java
+    global_cs_application_test_java_classpath: br.com.zup.edu.demoapp1009.DemoApp1009ApplicationTests.java
+    global_cs_application_test_java_classpath_dir: br/com/zup/edu/demoapp1009/DemoApp1009ApplicationTests.java
+  repository: https://github.com/rafaelpontezup-organization/demo-app-1009.git
